@@ -35,13 +35,17 @@ class MainController(QObject):
             df_buttons = pd.read_excel(fp)
             logging.info(f'Read in {fp}')
             logging.info(f'Column names: {df_buttons.columns}')
+            logging.info(f'Sample data: \n{df_buttons.head(3)}')
             # df_buttons contain 3 columns: button, path, and type.
             # Let's loop through and insert buttons in main view, depending on type
             for i, row in df_buttons.iterrows():
                 logging.info(f'Adding Button: {row["Button"]}, Path: {row["Path"]}, Type: {row["Type"]}')
                 button = QtWidgets.QPushButton(row['Button'])
+                
+                # Bind button to open file
                 button.clicked.connect(lambda _, p=row['Path']: os.startfile(p))
-                # If type is 'app', add to frame_apps
+
+                #### Place button in correct frame
                 if row['Type'] == 'App':
                     self.main_view.ui.frame_apps.addWidget(button)
                 # If type is 'folder', add to frame_folders
@@ -56,25 +60,28 @@ class MainController(QObject):
             logging.error(f'Error reading {fp}: {e}')
 
     def setup_ui(self):
+        logging.info('Showing main view...')
         self.main_view.show()
 
     def bind_buttons(self):
+        self.main_view.ui.btn_save_notes.clicked.connect(self.save_notes)
         self.main_view.ui.btn_restart.clicked.connect(self.restart_app)
 
     def hide_placeholder_buttons(self):
-        # Loop through all buttons in the frames and hide them if they are placeholders
+        ### Loop through all buttons in the frames and hide them if they are placeholders
         # If name begins with pushButton_, hide it
         for frame in [self.main_view.ui.frame_apps, self.main_view.ui.frame_folders, self.main_view.ui.frame_vscode]:
             # Log frame name
-            logging.info(f'Frame name: {frame.objectName()}')
+            logging.debug(f'Frame name: {frame.objectName()}')
             # Show number of buttons in frame
-            logging.info(f'Number of buttons: {frame.count()}')
+            logging.debug(f'Number of buttons: {frame.count()}')
             # Show names of objects in frame
+            logging.debug("Looping through frame for buttons...")
             for i in range(frame.count()):
                 try:
-                    logging.info(f'Button name: {frame.itemAt(i).widget().objectName()}')
+                    logging.debug(f'Button name: {frame.itemAt(i).widget().objectName()}')
                     if frame.itemAt(i).widget().objectName().startswith('pushButton'):
-                        logging.info("Need to hide {}".format(frame.itemAt(i).widget().objectName()))
+                        logging.debug("Hiding {}...".format(frame.itemAt(i).widget().objectName()))
                         # Hide the button
                         frame.itemAt(i).widget().hide()
                 except Exception as e:
@@ -85,5 +92,26 @@ class MainController(QObject):
         status = QtCore.QProcess.startDetached(sys.executable, sys.argv)
         logging.info(f'Restart status: {status}')
 
+    def save_notes(self):
+        # Get text from textbox_notes
+        notes = self.main_view.ui.textbox_notes.toPlainText()
+        # Save to text file
+        fp = os.path.join(project_root, 'notes.txt')
+        try:
+            with open(fp, 'w') as f:
+                f.write(notes)
+        except Exception as e:
+            logging.error(f'Error saving notes: {e}')
 
+    def load_notes(self):
+        # Load notes from text file
+        fp = os.path.join(project_root, 'notes.txt')
+        try:
+            with open(fp, 'r') as f:
+                notes = f.read()
+                self.main_view.ui.textbox_notes.setText(notes)
+            logging.info(f'Loaded notes from {fp}')
+        except Exception as e:
+            logging.error(f'Error loading notes: {e}')
+            self.main_view.ui.textbox_notes.setText('')
 

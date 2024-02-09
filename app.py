@@ -73,8 +73,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.controller.create_buttons_from_xl()
         # Hide placeholder buttons
         self.controller.hide_placeholder_buttons()
+        # Load notes
+        self.controller.load_notes()
 
-        # Set window position
+        #### Setting window position: bottom right corner of left screen
         desktop = QApplication.desktop()
         left_screen = desktop.screenGeometry(1)  # Assuming left screen is at index 0
         # Calculate the position for the bottom right corner of the left screen
@@ -88,6 +90,15 @@ class MainWindow(QtWidgets.QMainWindow):
         # Setup UI (show)
         self.controller.setup_ui()
 
+        # Set application icon
+        try:
+            icon_path = os.path.join(project_root, 'assets', 'earth_icon1.png')
+            self.setWindowIcon(QtGui.QIcon(icon_path))
+        except Exception as e:
+            logger.error(f'Error setting icon: {e}')
+
+        # Set background color for main UI without affecting button style
+        self.setStyleSheet("QMainWindow { background-color: lightblue; }")
                             
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

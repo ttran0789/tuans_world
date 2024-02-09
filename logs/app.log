@@ -1,35 +1,18 @@
-2024-02-08 15:59:01,140 - app.py - INFO - Converted main_view.ui to main_view.py
-2024-02-08 15:59:01,759 - app.py - INFO - Starting application...
-2024-02-08 15:59:01,782 - controllers.main_controller - INFO - MainController initialized
-2024-02-08 15:59:02,089 - controllers.main_controller - INFO - Read in C:\Users\tuan\Documents\GitHub\tuans_world\inputs\buttons.xlsx
-2024-02-08 15:59:02,089 - controllers.main_controller - INFO - Column names: Index(['Button', 'Type', 'Path'], dtype='object')
-2024-02-08 15:59:02,090 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\OneDrive\Desktop\iCRM.bat, Type: App
-2024-02-08 15:59:02,090 - controllers.main_controller - INFO - Adding Button: Hydro-py Flask, Path: C:\Users\tuan\OneDrive\Desktop\HydroPie Flask.bat, Type: App
-2024-02-08 15:59:02,091 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\iCRM, Type: Folder
-2024-02-08 15:59:02,091 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\tuans_world, Type: Folder
-2024-02-08 15:59:02,092 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\vsc_icrm.bat, Type: VSCode
-2024-02-08 15:59:02,092 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\vsc_tuansworld.bat, Type: VSCode
-2024-02-08 15:59:02,092 - controllers.main_controller - INFO - Frame name: frame_apps
-2024-02-08 15:59:02,092 - controllers.main_controller - INFO - Number of buttons: 4
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Button name: pushButton_3
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Need to hide pushButton_3
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Button name: pushButton_4
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Need to hide pushButton_4
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Button name: 
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Button name: 
-2024-02-08 15:59:02,093 - controllers.main_controller - INFO - Frame name: frame_folders
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Number of buttons: 4
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Button name: pushButton_5
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Need to hide pushButton_5
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Button name: pushButton_6
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Need to hide pushButton_6
-2024-02-08 15:59:02,094 - controllers.main_controller - INFO - Button name: 
-2024-02-08 15:59:02,095 - controllers.main_controller - INFO - Button name: 
-2024-02-08 15:59:02,095 - controllers.main_controller - INFO - Frame name: frame_vscode
-2024-02-08 15:59:02,095 - controllers.main_controller - INFO - Number of buttons: 4
-2024-02-08 15:59:02,095 - controllers.main_controller - INFO - Button name: pushButton
-2024-02-08 15:59:02,096 - controllers.main_controller - INFO - Need to hide pushButton
-2024-02-08 15:59:02,096 - controllers.main_controller - INFO - Button name: pushButton_2
-2024-02-08 15:59:02,096 - controllers.main_controller - INFO - Need to hide pushButton_2
-2024-02-08 15:59:02,096 - controllers.main_controller - INFO - Button name: 
-2024-02-08 15:59:02,096 - controllers.main_controller - INFO - Button name: 
+2024-02-09 13:25:03,823 - app.py - INFO - Converted main_view.ui to main_view.py
+2024-02-09 13:25:04,394 - app.py - INFO - Starting application...
+2024-02-09 13:25:04,415 - controllers.main_controller - INFO - MainController initialized
+2024-02-09 13:25:04,705 - controllers.main_controller - INFO - Read in C:\Users\tuan\Documents\GitHub\tuans_world\inputs\buttons.xlsx
+2024-02-09 13:25:04,705 - controllers.main_controller - INFO - Column names: Index(['Button', 'Type', 'Path'], dtype='object')
+2024-02-09 13:25:04,710 - controllers.main_controller - INFO - Sample data: 
+           Button    Type                                               Path
+0            iCRM     App            C:\Users\tuan\OneDrive\Desktop\iCRM.bat
+1  Hydro-py Flask     App  C:\Users\tuan\OneDrive\Desktop\HydroPie Flask.bat
+2            iCRM  Folder                C:\Users\tuan\Documents\GitHub\iCRM
+2024-02-09 13:25:04,711 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\OneDrive\Desktop\iCRM.bat, Type: App
+2024-02-09 13:25:04,711 - controllers.main_controller - INFO - Adding Button: Hydro-py Flask, Path: C:\Users\tuan\OneDrive\Desktop\HydroPie Flask.bat, Type: App
+2024-02-09 13:25:04,712 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\iCRM, Type: Folder
+2024-02-09 13:25:04,712 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\tuans_world, Type: Folder
+2024-02-09 13:25:04,713 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\vsc_icrm.bat, Type: VSCode
+2024-02-09 13:25:04,713 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\vsc_tuansworld.bat, Type: VSCode
+2024-02-09 13:25:04,714 - controllers.main_controller - INFO - Loaded notes from C:\Users\tuan\Documents\GitHub\tuans_world\notes.txt
+2024-02-09 13:25:04,715 - controllers.main_controller - INFO - Showing main view...

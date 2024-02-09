@@ -1,0 +1,10 @@
+Write all info here. Save notes saves to notes.txt file.
+
+To Do:
+     - Change the background color.
+     - Add icon
+     - Allow file browser for icon drop
+
+
+iCRM:
+     - main_ctrl - need to move add_customer_xl()

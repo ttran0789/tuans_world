@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>294</width>
-    <height>317</height>
+    <width>276</width>
+    <height>483</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,21 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QTextEdit" name="textEdit"/>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Personal Notes:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textbox_notes"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_save_notes">
+          <property name="text">
+           <string>Save Notes</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_3">
@@ -108,6 +122,19 @@
        </layout>
       </item>
       <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QPushButton" name="btn_restart">
         <property name="text">
          <string>Restart</string>
@@ -123,7 +150,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>294</width>
+     <width>276</width>
      <height>21</height>
     </rect>
    </property>
