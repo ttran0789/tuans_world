@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>276</width>
-    <height>483</height>
+    <width>393</width>
+    <height>466</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +21,12 @@
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>Consolas</family>
+            <italic>true</italic>
+           </font>
+          </property>
           <property name="text">
            <string>Personal Notes:</string>
           </property>
@@ -39,7 +45,7 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Apps</string>
+           <string>Launch App</string>
           </property>
          </widget>
         </item>
@@ -150,7 +156,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>276</width>
+     <width>393</width>
      <height>21</height>
     </rect>
    </property>

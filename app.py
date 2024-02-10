@@ -7,6 +7,7 @@ from PyQt5 import uic
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
+from PyQt5.QtCore import Qt
 
 # Get project root directory
 try:
@@ -64,6 +65,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.controller = MainController(self)
         # Set window to always on top
+        # self.setWindowFlag(Qt.FramelessWindowHint) # this will hide the title bar 
         self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
         # Set window title
         self.setWindowTitle('Tuan\'s World')
@@ -82,8 +84,8 @@ class MainWindow(QtWidgets.QMainWindow):
         # Calculate the position for the bottom right corner of the left screen
         window_width = self.frameGeometry().width()
         window_height = self.frameGeometry().height()
-        screen_bottom = left_screen.bottom() - 75
-        screen_right = left_screen.right() - 75
+        screen_bottom = left_screen.bottom() - 80
+        screen_right = left_screen.right() - 0
         # Set window position
         self.move(screen_right - window_width, screen_bottom - window_height)
 

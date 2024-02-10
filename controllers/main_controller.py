@@ -2,6 +2,7 @@
 import os
 import sys
 from PyQt5.QtCore import QObject
+from PyQt5.QtGui import QIcon
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
 from PyQt5 import QtCore
@@ -44,16 +45,21 @@ class MainController(QObject):
                 
                 # Bind button to open file
                 button.clicked.connect(lambda _, p=row['Path']: os.startfile(p))
+                # setting icon to the button
+                fp_vscode_icon = os.path.join(project_root, 'assets', 'vscode_icon.png')
 
                 #### Place button in correct frame
                 if row['Type'] == 'App':
                     self.main_view.ui.frame_apps.addWidget(button)
+                    button.setIcon(QIcon(os.path.join(project_root, 'assets', 'launch_icon.png')))
                 # If type is 'folder', add to frame_folders
                 elif row['Type'] == 'Folder':
                     self.main_view.ui.frame_folders.addWidget(button)
+                    button.setIcon(QIcon(os.path.join(project_root, 'assets', 'explorer_icon.png')))
                 # If type is 'VSCode' add to frame_vscode
                 elif row['Type'] == 'VSCode':
                     self.main_view.ui.frame_vscode.addWidget(button)
+                    button.setIcon(QIcon(os.path.join(project_root, 'assets', 'vscode_icon.png')))
                 else:
                     logging.error(f'Unknown type: {row["Type"]}')
         except Exception as e:
