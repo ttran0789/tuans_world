@@ -38,6 +38,11 @@ class MainController(QObject):
         self.load_settings()
         # Set icon (found in settings.json)
         self.set_icon()
+        # Set window size from previous session
+        wsize = self.settings["window_size"]
+        self.main_view.resize(wsize['width'], wsize['height'])
+        # Bind windows geometry change event
+        self.main_view.resizeEvent = self.on_resize
 
     # Loops through excel file and creates buttons
     def create_buttons_from_xl(self,fp=None):
@@ -210,3 +215,10 @@ class MainController(QObject):
         except Exception as e:
             logger.error(f'Error changing icon: {e}')
             QMessageBox.critical(self.main_view, 'Error', f'Error changing icon: {e}')
+
+    # On resize event
+    def on_resize(self, event):
+        logger.debug(f'Window resized: {event.size()}')
+        # Save window size to settings
+        self.settings['window_size'] = {'width': event.size().width(), 'height': event.size().height()}
+        self.save_settings()
