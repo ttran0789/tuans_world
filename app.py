@@ -65,7 +65,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.controller = MainController(self)
         # Set window to always on top
-        # self.setWindowFlag(Qt.FramelessWindowHint) # this will hide the title bar 
+        # self.setWi`1  ndowFlag(Qt.FramelessWindowHint) # this will hide the title bar 
         self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
         # Set window title
         self.setWindowTitle('Tuan\'s World')
@@ -91,13 +91,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Setup UI (show)
         self.controller.setup_ui()
-
-        # Set application icon
-        try:
-            icon_path = os.path.join(project_root, 'assets', 'earth_icon1.png')
-            self.setWindowIcon(QtGui.QIcon(icon_path))
-        except Exception as e:
-            logger.error(f'Error setting icon: {e}')
 
         # Set background color for main UI without affecting button style
         self.setStyleSheet("QMainWindow { background-color: lightblue; }")

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
-    <height>466</height>
+    <width>358</width>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,6 +41,24 @@
            <string>Save Notes</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="btn_select_buttons">
+            <property name="text">
+             <string>Change Buttons File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_change_icon">
+            <property name="text">
+             <string>Change Icon</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <widget class="QLabel" name="label_3">
@@ -156,7 +174,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>393</width>
+     <width>358</width>
      <height>21</height>
     </rect>
    </property>
