@@ -34,10 +34,12 @@ class MainController(QObject):
         fp = os.path.join(project_root, 'inputs', 'buttons.xlsx')
         try:
             df_buttons = pd.read_excel(fp)
+            # Filter for user
+            df_buttons = df_buttons[df_buttons['User'] == os.getlogin()]
             logging.info(f'Read in {fp}')
             logging.info(f'Column names: {df_buttons.columns}')
             logging.info(f'Sample data: \n{df_buttons.head(3)}')
-            # df_buttons contain 3 columns: button, path, and type.
+            # df_buttons contain 4 columns: button, path, and type.
             # Let's loop through and insert buttons in main view, depending on type
             for i, row in df_buttons.iterrows():
                 logging.info(f'Adding Button: {row["Button"]}, Path: {row["Path"]}, Type: {row["Type"]}')
