@@ -1,9 +1,9 @@
 Write all info here. Save notes saves to notes.txt file.
 
 To Do:
-     - Change the background color.
-     - Add icon
-     - Allow file browser for icon drop
+     - [DONE] Change the background color.
+     - [DONE] Add icon
+     - [DONE] Allow file browser for icon drop
 
 
 iCRM:
