@@ -42,7 +42,7 @@
 
 ## Logs
 *.log
-logs/*
+logs/*.*
 
 ## Python builds
 *.py[cod]
@@ -114,3 +114,4 @@ reveal.js/
 dev/*
 archive/
 papers/
+logs/*
