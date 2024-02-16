@@ -1,15 +1,20 @@
-2024-02-15 14:57:45,962 - app.py - INFO - Converted main_view.ui to main_view.py
-2024-02-15 14:57:46,968 - app.py - INFO - Starting application...
-2024-02-15 14:57:47,016 - controllers.main_controller - INFO - MainController initialized
-2024-02-15 14:57:47,586 - controllers.main_controller - INFO - Read in C:\Users\tt04658\OneDrive - The Hartford\Documents\Github\tuans_world\inputs\buttons.xlsx
-2024-02-15 14:57:47,586 - controllers.main_controller - INFO - Column names: Index(['Button', 'Type', 'Path', 'User'], dtype='object')
-2024-02-15 14:57:47,595 - controllers.main_controller - INFO - Sample data: 
-          Button    Type                                               Path     User
-8   Tuan's World  Folder  C:\Users\tt04658\OneDrive - The Hartford\Docum...  TT04658
-9      Downloads  Folder                        C:\Users\TT04658\Downloads\  TT04658
-10  Tuan's World  VSCode  C:\Users\TT04658\Documents\GitHub\vsc_tuanswor...  TT04658
-2024-02-15 14:57:47,596 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tt04658\OneDrive - The Hartford\Documents\Github\tuans_world, Type: Folder
-2024-02-15 14:57:47,599 - controllers.main_controller - INFO - Adding Button: Downloads, Path: C:\Users\TT04658\Downloads\, Type: Folder
-2024-02-15 14:57:47,601 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\TT04658\Documents\GitHub\vsc_tuansworld.bat, Type: VSCode
-2024-02-15 14:57:47,609 - controllers.main_controller - INFO - Loaded notes from C:\Users\tt04658\OneDrive - The Hartford\Documents\Github\tuans_world\notes.txt
-2024-02-15 14:57:47,611 - controllers.main_controller - INFO - Showing main view...
+2024-02-16 07:42:07,698 - app.py - INFO - Converted main_view.ui to main_view.py
+2024-02-16 07:42:08,297 - app.py - INFO - Starting application...
+2024-02-16 07:42:08,320 - controllers.main_controller - INFO - MainController initialized
+2024-02-16 07:42:08,618 - controllers.main_controller - INFO - Read in C:\Users\tuan\Documents\GitHub\tuans_world\inputs\buttons.xlsx
+2024-02-16 07:42:08,618 - controllers.main_controller - INFO - Column names: Index(['Button', 'Type', 'Path', 'User'], dtype='object')
+2024-02-16 07:42:08,624 - controllers.main_controller - INFO - Sample data: 
+           Button    Type                                               Path  User
+0            iCRM     App            C:\Users\tuan\OneDrive\Desktop\iCRM.bat  tuan
+1  Hydro-py Flask     App  C:\Users\tuan\OneDrive\Desktop\HydroPie Flask.bat  tuan
+2            iCRM  Folder                C:\Users\tuan\Documents\GitHub\iCRM  tuan
+2024-02-16 07:42:08,624 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\OneDrive\Desktop\iCRM.bat, Type: App
+2024-02-16 07:42:08,630 - controllers.main_controller - INFO - Adding Button: Hydro-py Flask, Path: C:\Users\tuan\OneDrive\Desktop\HydroPie Flask.bat, Type: App
+2024-02-16 07:42:08,634 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\iCRM, Type: Folder
+2024-02-16 07:42:08,636 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\tuans_world, Type: Folder
+2024-02-16 07:42:08,637 - controllers.main_controller - INFO - Adding Button: Downloads, Path: C:\Users\tuan\Downloads\, Type: Folder
+2024-02-16 07:42:08,639 - controllers.main_controller - INFO - Adding Button: iCRM, Path: C:\Users\tuan\Documents\GitHub\vsc_icrm.bat, Type: VSCode
+2024-02-16 07:42:08,643 - controllers.main_controller - INFO - Adding Button: Tuan's World, Path: C:\Users\tuan\Documents\GitHub\vsc_tuansworld.bat, Type: VSCode
+2024-02-16 07:42:08,647 - controllers.main_controller - INFO - Adding Button: hydro-py, Path: C:\Users\tuan\Documents\GitHub\vsc_hydropy.bat, Type: VSCode
+2024-02-16 07:42:08,652 - controllers.main_controller - INFO - Loaded notes from C:\Users\tuan\Documents\GitHub\tuans_world\notes.txt
+2024-02-16 07:42:08,653 - controllers.main_controller - INFO - Showing main view...

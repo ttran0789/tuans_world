@@ -1,0 +1,116 @@
+### DATA ----------------------------------------------------------------------
+
+## Builds
+*.exe
+*.pkg
+
+## flat files
+*.*sv
+
+## Office docs
+*.pkl*
+*.doc*
+*.ppt*
+*.numbers
+*.pages
+*.key
+# ALLOW *.pdf
+
+## archives
+*.tar*
+*.tgz
+*.bz2
+*.zip
+*.7z
+*.pkl
+
+## basic datastores: sqlite, access, redis, hdf5, feather
+*.db*
+*.mdb
+*.rdb
+*.h5
+*.feather
+
+## logs
+*.log
+
+
+### PYTHON --------------------------------------------------------------------
+
+## iPython notebooks
+.ipynb_checkpoints/
+
+## Logs
+*.log
+logs/*
+
+## Python builds
+*.py[cod]
+*.egg*
+*.pickle
+*.pkl
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib*
+
+## unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+## Translations
+*.mo
+
+## PyDev (Eclipse)
+.project
+.pydevproject
+
+## PyCharm IDE
+.idea/*
+
+
+## R --------------------------------------------------------------------------
+.RData
+.Rhistory
+
+
+## MISC -----------------------------------------------------------------------
+
+## OSX
+*.asc
+.DS_Store
+*.names
+._*
+.Spotlight-V100
+.Trashes
+*.tmp
+
+## Windows autosaves
+~$*
+
+## Windows symlinks
+*.lnk
+
+## Dev configs
+dev.yaml
+
+## Logs
+*.log
+
+
+## C extensions
+*.so
+
+## AOB
+temp/*
+reveal.js/
+dev/*
+archive/
+papers/

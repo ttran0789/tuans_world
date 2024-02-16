@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\tt04658\OneDrive - The Hartford\Documents\Github\tuans_world\views\main_view.ui'
+# Form implementation generated from reading ui file 'C:\Users\tuan\Documents\GitHub\tuans_world\views\main_view.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
