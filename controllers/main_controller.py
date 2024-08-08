@@ -36,13 +36,21 @@ class MainController(QObject):
         logger.info('MainController initialized')
         # Load settings on startup from JSON
         self.load_settings()
+        # Restore previous session settings
+        self.restore_previous_session()
         # Set icon (found in settings.json)
         self.set_icon()
+        
+
+    # Restore previous session settings
+    def restore_previous_session(self):
         # Set window size from previous session
         wsize = self.settings["window_size"]
         self.main_view.resize(wsize['width'], wsize['height'])
-        # Bind windows geometry change event
-        self.main_view.resizeEvent = self.on_resize
+        # Set window position from previous session
+        wpos = self.settings["window_position"]
+        self.main_view.move(wpos['x'], wpos['y'])
+        logger.info(f"Restored previous session settings: {wsize}, {wpos}")
 
     # Loops through excel file and creates buttons
     def create_buttons_from_xl(self,fp=None):
@@ -94,6 +102,19 @@ class MainController(QObject):
         self.main_view.ui.btn_restart.clicked.connect(self.restart_app)
         self.main_view.ui.btn_select_buttons.clicked.connect(self.select_buttons_file)
         self.main_view.ui.btn_change_icon.clicked.connect(self.change_icon)
+        # Bind windows geometry change event
+        self.main_view.resizeEvent = self.on_resize
+        # Bind windows position change event
+        self.main_view.moveEvent = self.on_move
+        # Bind shortcut Ctrl+Shift+C to center_window
+        self.shortcut = QtWidgets.QShortcut(QtGui.QKeySequence("Ctrl+Shift+C"), self.main_view)
+        self.shortcut.activated.connect(self.center_window)
+
+    # Center window
+    def center_window(self):
+        # Move to 0,0
+        self.main_view.move(400,200)
+
 
     # Change buttons file: open dialog to select new buttons file
     def select_buttons_file(self):
@@ -218,7 +239,14 @@ class MainController(QObject):
 
     # On resize event
     def on_resize(self, event):
-        logger.debug(f'Window resized: {event.size()}')
+        logger.info(f'Window resized: {event.size()}')
         # Save window size to settings
         self.settings['window_size'] = {'width': event.size().width(), 'height': event.size().height()}
+        self.save_settings()
+
+    # On move event
+    def on_move(self, event):
+        logger.info(f'Window moved: {event.pos()}')
+        # Save window position to settings
+        self.settings['window_position'] = {'x': event.pos().x(), 'y': event.pos().y()}
         self.save_settings()

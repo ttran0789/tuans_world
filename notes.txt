@@ -1,10 +1,21 @@
 Write all info here. Save notes saves to notes.txt file.
 
 To Do:
-     - [DONE] Change the background color.
-     - [DONE] Add icon
-     - [In Progress] Allow file browser for icon drop
+     - Move all dynamic model/view/controllers over
+
+iCRM Changes:
+     - Add Submission Form:
+	- Select Customers & Brokers. 
+	- Updates code/id/mailing address in form.
+     - Dynamic model/view/controller for customers, brokers, submissions
+     - Submissions Form updated
 
 
-iCRM:
-     - main_ctrl - need to move add_customer_xl()
+
+Esteres:
+Salmon dip
+Full Cesar
+PRINCE CASPIAN - half prosciutto
+of the earth
+
+

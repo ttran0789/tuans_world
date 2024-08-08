@@ -38,6 +38,7 @@ logging.getLogger().addHandler(console_handler)
 logger = logging.getLogger('app.py')
 
 
+
 # UI files to convert
 dict_io = {
     'main_view.ui':'main_view.py'
@@ -77,18 +78,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.controller.hide_placeholder_buttons()
         # Load notes
         self.controller.load_notes()
-
-        #### Setting window position: bottom right corner of left screen
-        desktop = QApplication.desktop()
-        left_screen = desktop.screenGeometry(1)  # Assuming left screen is at index 0
-        # Calculate the position for the bottom right corner of the left screen
-        window_width = self.frameGeometry().width()
-        window_height = self.frameGeometry().height()
-        screen_bottom = left_screen.bottom() - 80
-        screen_right = left_screen.right() - 0
-        # Set window position
-        self.move(screen_right - window_width, screen_bottom - window_height)
-
         # Setup UI (show)
         self.controller.setup_ui()
 
